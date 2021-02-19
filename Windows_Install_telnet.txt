@@ -1,0 +1,6 @@
+# 今の状態を確認
+Get-WindowsOptionalFeature -Online -FeatureName *telnet*
+
+
+# Telnetを有効化
+Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient
