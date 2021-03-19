@@ -1,1 +1,2 @@
-
+ # TimeZoneをJST(UTC+9)にセット
+ Set-TimeZone -id "Tokyo Standard Time"
