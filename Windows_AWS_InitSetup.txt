@@ -1,2 +1,17 @@
- # TimeZoneをJST(UTC+9)にセット
+#UIの言語を日本語で上書きします。
+Set-WinUILanguageOverride -Language ja-JP
+
+#時刻/日付の形式をWindowsの言語と同じにします。
+Set-WinCultureFromLanguageListOptOut -OptOut $False
+
+#ロケーションを日本にします。
+Set-WinHomeLocation -GeoId 0x7A
+
+#システムロケールを日本にします。
+Set-WinSystemLocale -SystemLocale ja-JP
+
+# TimeZoneをJST(UTC+9)にセット
  Set-TimeZone -id "Tokyo Standard Time"
+
+#サーバーを再起動します。
+Restart-Computer
